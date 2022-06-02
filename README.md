@@ -23,8 +23,9 @@
 - 人気のゲームが何か知りたい時
 
 ## 設計書
-
-
+- ER図　=> https://app.diagrams.net/#G1Q2tFarHv-gSXc4QEb46nk8-IhoI1XNNC
+- テーブル提議書 => https://docs.google.com/spreadsheets/d/1Va4w7Rtxun5FZTdcbjTxaDgfQjuE6Sy5OgswmPo6Pgs/edit#gid=330628383
+- アプリケーション詳細設計 => 
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
