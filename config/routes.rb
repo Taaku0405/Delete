@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     sessions: "admin/sessions"
   }
 
+   root to: "public/homes#top"
+   get "public/homes/about"
+
    namespace :admin do
      resources :end_users, only: [:index, :show, :edit, :update]
 

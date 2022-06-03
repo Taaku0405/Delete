@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EGC</title>
+    <title>E.G.C</title>
+    <%= favicon_link_tag("logo-black.png") %>
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +12,30 @@
   </head>
 
   <body>
+    <heder style="background-color: #00bfff">
+    </heder>
+    <main class="pb-5">
+      <div class="text-center", style="height: 30px;">
+        <div id="flash_message", style="display: none;">
+          <%= render "layouts/flash_message" %>
+        </div>
+      </div>
     <%= yield %>
+    </main>
+    <div style="height: 100px;"></div>
+    <footer class="text-center", style="background-color: #00bfff">
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto mt-3">
+            <p>©︎Enjoy.Gaming.Community.inc</p>
+            <i class="fas fa-steam"></i>
+            <i class="fas fa-xbox"></i>
+            <i class="fas fa-playstation"></i>
+            <i class="fas fa-twitch"></i>
+            <i class="fas fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
