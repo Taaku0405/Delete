@@ -1,7 +1,12 @@
-<div class='container mx-auto'>
-  <div class='row'>
+<div class="container mx-auto">
+  <div class="row">
     <div class="col-lg-3 mt-5"></div>
-
+    <h3 class="text-center">
+      Welcom to<i class="fab fa-d-and-d"></i><strong>Enjoy.Gaming.community</strong> !<br>
+      <i class="fas fa-gamepad"></i>E.G.Cは全国のゲーム好きが集まるコミュニティサイトです！<br>
+      チームを作ってメンバーを募りたい人も、新しいゲームを探している人も<br>
+      この機会にぜひご活用してください！
+    </h3>
     <div class="col-lg-9 mt-5">
       <div class="row">
         <div id="carouselExampleControls", class="carousel slide", data-ride="carousel">
@@ -9,41 +14,26 @@
             <div class="carousel-item active">
               <%= image_tag "image1.jpg", style: "background-size: cover;", size: "850x280", class: "carousel_image" %>
               <div class="carousel-caption d-md-block mb-5">
-                <h5 class="card-text text-black-50 mb-5">
-                  ようこそ！あなたの欲しい"今"が見つかる
-                </h5>
               </div>
             </div>
             <div class="carousel-item">
               <%= image_tag "image2.jpg", style: "background-size: cover;", size: "850x280", class: "carousel_image" %>
               <div class="carousel-caption d-md-block mb-5">
-                <h5 class="card-text text-black-50 mb-5">
-                  買い物の感動を届けたい！
-                </h5>
               </div>
             </div>
             <div class="carousel-item">
               <%= image_tag "image3.jpg", style: "background-size: cover;", size: "850x280", class: "carousel_image" %>
               <div class="carousel-caption d-md block mb-5">
-                <h5 class="card-text text-black-50 mb-5">
-                  Have a nice day!
-                </h5>
               </div>
             </div>
             <div class="carousel-item">
               <%= image_tag "image4.jpg", style: "background-size: cover;", size: "850x280", class: "carousel_image" %>
               <div class="carousel-caption d-md block mb-5">
-                <h5 class="card-text text-black-50 mb-5">
-                  Let's go wherever you want to go.
-                </h5>
               </div>
             </div>
             <div class="carousel-item">
               <%= image_tag "image5.jpg", style: "background-size: cover;", size: "850x280", class: "carousel_image" %>
               <div class="carousel-caption d-md block mb-5">
-                <h5 class="card-text text-black-50 mb-5">
-                  Everyday is new day!
-                </h5>
               </div>
             </div>
             <a class="carousel-control-prev", href="#carouselExampleControls", role="button", data-slide="prev">
@@ -57,6 +47,16 @@
           </div>
         </div>
 
+
+        <div class="btn-wrapper col-10 mx-auto pt-5">
+          <div class="row">
+            <%= link_to "ログイン", new_end_user_session_path, class: "btn btn-outline-info btn-lg btn-block mb-3 sign_in" %>
+          </div>
+          <div class="row">
+            <%= link_to "新規登録", new_end_user_registration_path, class: "btn btn-outline-success btn-lg btn-block sign_up" %>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
