@@ -1,18 +1,19 @@
 class Admin::PostsController < ApplicationController
   before_action :authenticate_admin!
   def index
-  end 
-  
+    @posts = Post.all
+  end
+
   def show
-  end 
-  
+  end
+
   def edit
-  end 
-  
+  end
+
   def update
-  end 
-  
+  end
+
   def destroy
-  end 
-  
+  end
+
 end
