@@ -1,0 +1,30 @@
+<div class="container">
+  <h3 class="d-inline-block px-4 mx-5 mb-3 text-info"><i class="fas fa-user-secret"></i><%= @end_user.name %>さんの会員詳細</h3>
+
+  <table class="my-3">
+    <tbody>
+      <tr>
+        <td style="width: 30%">会員ID</td>
+        <td><%= end_user.id %></td>
+      </tr>
+      <tr>
+        <td style="width: 30%">ニックネーム</td>
+        <td><%= end_user.name %></td>
+      </tr>
+      <tr>
+        <td style="width 30%">メールアドレス</td>
+        <td><%= end_user.email %></td>
+      </tr>
+      <tr>
+        <td style="width 30%">ステータス</td>
+        <% if end_user.is_deleted == false %>
+        <td class="text-success"><strong>有効</strong></td>
+        <% else %>
+        <td class="text-secondary"><strong>退会</strong></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+
+  <%= link_to "会員情報を編集", edit_admin_end_user_path(@end_user.id), class: "btn btn-outline-success px-5 offset-2" %>
+</div>
