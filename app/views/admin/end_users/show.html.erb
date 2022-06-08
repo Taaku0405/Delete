@@ -4,19 +4,19 @@
   <table class="my-3">
     <tbody>
       <tr>
-        <td style="width: 30%">会員ID</td>
+        <td>会員ID</td>
         <td><%= end_user.id %></td>
       </tr>
       <tr>
-        <td style="width: 30%">ニックネーム</td>
+        <td>ニックネーム</td>
         <td><%= end_user.name %></td>
       </tr>
       <tr>
-        <td style="width 30%">メールアドレス</td>
+        <td>メールアドレス</td>
         <td><%= end_user.email %></td>
       </tr>
       <tr>
-        <td style="width 30%">ステータス</td>
+        <td>ステータス</td>
         <% if end_user.is_deleted == false %>
         <td class="text-success"><strong>有効</strong></td>
         <% else %>

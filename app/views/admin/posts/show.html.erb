@@ -1,0 +1,30 @@
+<div class="container">
+  <h3 class="d-inline-block px-4 mx-5 mb-3 text-primary"><i class="fas fa-gavel"></i>ゲーム投稿詳細</h3>
+
+  <table class="table table-borderless">
+    <tbody>
+      <tr>
+        <td>投稿者</td>
+        <td>
+          <%= image_tag @post.end_user.get_profile_image, size: "300x250" %><br>
+          <%= post.end_user.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>ゲーム名</td>
+        <td><%= post.name %></td>
+      </tr>
+      <tr>
+        <td>おすすめポイント</td>
+        <td><%= post.introduction %></td>
+      </tr>
+      <tr>
+        <td>ジャンル</td>
+        <td><%= post.genre.name %></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <%= link_to "投稿情報を削除する", @post, method: :delete, data: { confirm "投稿を削除します。本当によろしいですか？" } 
+  <%= link_to "投稿情報を編集する", edit_admin_post_path(@post), class: "btn btn-outline-success px-5 offset-2" %>
+</div>
