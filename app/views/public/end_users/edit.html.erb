@@ -5,7 +5,7 @@
 
   <h3 class="d-inline-block px-4 mx-5 mb-3 text-primary"><i class="fas fa-user-edit"></i>プロフィール編集</h3>
 
-  <% form_with model: @end_user, url: edit_end_user_path, method: :patch do |f| %>
+  <%= form_with model: @end_user, url: edit_end_user_path, method: :patch do |f| %>
 
   <div class="form-group row">
     <strong><%= f.label :"ニックネーム", class: "col-sm-3 col-form-label" %></strong>

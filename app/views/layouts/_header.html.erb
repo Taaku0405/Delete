@@ -10,7 +10,7 @@
 
     <% if end_user_signed_in? %>
     <div class="center">
-      <p><%= end_user.name %>様おかえりなさいませ！</p>
+      <p><%= current_end_user.name %>様おかえりなさいませ！</p>
     </div>
     <% end %>
 
@@ -18,7 +18,7 @@
       <ul class="navbar-nav mt-2">
         <% if end_user_signed_in? %>
         <li class="nav-link">
-          <%= link_to end_user_path, class: "btn" do %>
+          <%= link_to current_end_user, class: "btn" do %>
           <i class="fas fa-user-secret"></i>マイページ
           <% end %>
         </li>

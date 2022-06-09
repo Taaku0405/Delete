@@ -7,9 +7,9 @@ class EndUser < ApplicationRecord
   has_one_attached :profile_image
 
   def self.guest
-    find_or_create_by!(name: 'guestuser' ,email: 'guest@example.com') do |user|
-      user.password = SecureRandom.urlsafe_base64
-      user.name = "guestuser"
+    find_or_create_by!(name: 'guestuser' ,email: 'guest@example.com') do |end_user|
+      end_user.password = SecureRandom.urlsafe_base64
+      end_user.name = "guestuser"
     end
   end
 

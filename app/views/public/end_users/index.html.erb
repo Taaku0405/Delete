@@ -1,6 +1,6 @@
 <div class="container">
   <h3 class="d-inline-block px-4 mx-5 mb-3 text-primary"><i class="fas fa-users"></i>会員一覧</h3>
-  
+
   <div class="card-header"><i class="fas fa-user-secret"></i>会員</div>
   <table class="table table-borderless table-hover">
     <thead class="bg-info">
@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @end_users.each do |end_user| %>
+      <%  @end_user.each do |end_user| %>
       <tr>
         <td><%= image_tag end_user.get_profile_image, size:"100x100" %></td>
         <td><%= end_user.name %></td>
