@@ -3,6 +3,7 @@
 
   <table class="table table-borderless">
     <tbody>
+      <tr><%= image_tag @end_user.get_profile_image, size:"100x100" %></tr>
       <tr>
         <td>投稿者</td>
         <td>
@@ -25,6 +26,8 @@
     </tbody>
   </table>
   
+  <div class="text-center">
   <%= link_to "投稿情報を削除する", @post, method: :delete, data: { confirm "投稿を削除します。本当によろしいですか？" } 
   <%= link_to "投稿情報を編集する", edit_admin_post_path(@post), class: "btn btn-outline-success px-5 offset-2" %>
+  </div>
 </div>
