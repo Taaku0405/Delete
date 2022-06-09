@@ -1,41 +1,30 @@
 <div class="container">
   <h3 class="d-inline-block px-4 mx-5 mb-3 text-primary"><i class="fas fa-gamepad"></i>ゲーム投稿一覧</h3>
-  <div>
+  <div class="text-center mb-4">
     <%= link_to new_post_path do %>
     <i class="fas fa-plus-square"></i>
     <i class="text-primary">ゲームを新規投稿する</i>
     <% end %>
   </div>
 
-  <div class="row ml-4 mt-1">
+  <div class="row">
+    <div class="col-2">
     <%= render "sidebar", genres: @genres %>
+    </div>
 
-      <div class="card-header"><i class="fas fa-ghost"></i>ゲーム投稿</div>
-      <table class="table table-borderless">
-        <thead class="bg-info">
-          <tr>
-            <th>投稿ID</th>
-            <th>投稿日</th>
-            <th>ゲーム名</th>
-            <th>ゲームジャンル</th>
-            <th>投稿者</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @posts.each do |post| %>
-          <tr>
-            <td><%= post.id %></td>
-            <td><%= post.created_at.strftime('%Y/%m/%d %H:%M:%S') %></td>
-            <td>
-              <%= link_to post_path(post) do %>
-              <u class="hover-link"><%= post.name %></u>
-              <% end %>
-            </td>
-            <td><%= post.genre.name %></td>
-            <td><%= post.end_user.name %></td>
-          </tr>
+    <div class="col-8">
+      <h4 class="text-center mb-4"><i class="fas fa-ghost"></i>投稿一覧(全<%= @posts.count %>件)</h4>
+      <div class="post_index d-flex flex-wrap">
+        <% @posts.each do |post| %>
+        <div class="post_box mr-3">
+          <%= link_to post_path(post) do %>
+          <%= post.name %>
           <% end %>
-        </tbody>
-      </table>
+          <br><div class="badge">投稿者<%= post.end_user.name %></div>
+          <br><div class="badge">投稿日<%= post.created_at.strftime('%Y/%m/%d %H:%M:%S') %></div>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
