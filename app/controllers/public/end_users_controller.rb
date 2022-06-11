@@ -11,11 +11,11 @@ class Public::EndUsersController < ApplicationController
   end
 
   def edit
-    @end_user = current_end_user
+    @end_user = EndUser.find(params[:id])
   end
 
   def update
-    @end_user = current_end_user
+    @end_user = EndUser.find(params[:id])
     if @end_user.update(end_user_params)
       redirect_to end_user_path, notice: "会員情報を更新しました"
     else

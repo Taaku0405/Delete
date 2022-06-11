@@ -23,12 +23,11 @@ class Public::PostsController < ApplicationController
   def create
     @genres = Genre.all
     @post = Post.new(post_params)
-    @post.end_user_id = current_end_user.id
     if @post.save
-      redirect_to post_path, notice: "ゲーム投稿を登録しました"
+      redirect_to post_path(current_end_user), notice: "ゲーム投稿を登録しました"
     else
       render :new
-    end 
+    end
   end
 
   def update
@@ -53,10 +52,10 @@ class Public::PostsController < ApplicationController
     @genre = Genre.find(params[:format])
      render :index
   end
-  
+
   private
   def post_params
     params.require(:post).permit(:name, :introduction, :genre_id)
   end
-  
+
 end
