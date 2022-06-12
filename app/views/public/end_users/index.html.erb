@@ -13,7 +13,7 @@
     <tbody>
       <%  @end_user.each do |end_user| %>
       <tr>
-        <td><%= image_tag end_user.get_profile_image, size:"100x100" %></td>
+        <td><%= image_tag end_user.get_profile_image, size:"50x50" %></td>
         <td><%= end_user.name %></td>
         <td><%= link_to "詳細を見る", end_user_path(end_user.id), class: "btn btn-outline-info px-5" %></td>
       </tr>
