@@ -24,7 +24,7 @@ class Public::PostsController < ApplicationController
     @genres = Genre.all
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_path(current_end_user), notice: "ゲーム投稿を登録しました"
+      redirect_to posts_path, notice: "ゲーム投稿を登録しました"
     else
       render :new
     end
